@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Номунад зориулав</title>
+    <base href="/nomuna/">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Хамгийн хөөрхөн охинд зориулав ❤️</h1>
+    </header>
+    <section id="loveMessage">
+        <h2>Чамдаа зориулсан таавар:</h2>
+        <p>Энэ тааврыг таавал надад хайртай гэсэн үг таахгүй бол харин?</p>
+        <button id="showRiddleBtn">Таавар харуулах</button>
+
+        <p id="riddle" class="hidden">Бидний хамгийн анх болзсон газар?</p>
+        <input type="text" id="riddleAnswer" placeholder="Таны хариулт..." class="hidden">
+        <button id="submitAnswer" class="hidden">Хариулт илгээх</button>
+        <p id="feedback" class="hidden"></p>
+
+        <form id="quizForm" class="hidden">
+            <p>Бидний хамгийн гайхалтай аялсан газар?</p>
+            <label><input type="radio" name="quiz" value="Paris">Paris</label><br>
+            <label><input type="radio" name="quiz" value="Roma">Roma</label><br>
+            <label><input type="radio" name="quiz" value="Swiss">Swiss</label><br>
+
+            <p>Би унгараас юу хамгийн их санаж байгаа вэ?</p>
+            <label><input type="radio" name="quiz2" value="1">Bellozo</label><br>
+            <label><input type="radio" name="quiz2" value="2">Nomuna</label><br>
+            <label><input type="radio" name="quiz2" value="3">Infinity</label><br>
+
+            <button type="submit">Илгээх</button>
+        </form>
+        <p id="quizFeedback" class="hidden"></p>
+        <p id="quiz2Feedback" class="hidden"></p>
+    </section>
+
+    <section id="love-time">
+        <h2>Чамдаа дурлаад:</h2>
+        <div id="timer"></div>
+    </section>
+
+    <section id="complimentSection">
+        <h2>Хайрдаа хэлэх нь (дараад байгаарай):</h2>
+        <p id="complimentText"></p>
+        <button id="generateComplimentBtn">Харах</button>
+    </section>
+
+    <section id="songSection">
+        <h2>Чамдаа зориулсан дуу:</h2>
+        <p>Энэ дууг сонсоод хийгээрэй!</p>
+        <audio controls>
+            <source src="./duu.mp3" type="audio/mp3">
+        </audio>
+    </section>
+
+    <section id="photoGallery">
+        <h2>You and I:</h2>
+        <div class="gallery">
+            <img src="./us1.jpeg" alt="Love Photo 1" title="Миний дуртай зураг" />
+            <img src="./us2.png" alt="Love Photo 2" title="Сайхан цаг хугацаа өнгөрүүлсэн!" />
+            <img src="./us4.png" alt="Love Photo 3" title="Хамтдаа өнгөрүүлсэн үзэсгэлэнт өдрүүд!" />
+            <img src="./us5.JPG" alt="Love Photo 4" title="Миний хайр Baddie байж ээ хахахах" />
+            <img src="./us6.JPG" alt="Love Photo 5" title="Инээдтэй шүү хаха" />
+        </div>
+    </section>
+
+    <section id="messageSection">
+        <h2>Надад захиа илгээх</h2>
+        <form id="messageForm">
+            <textarea id="message" placeholder="Хайрдаа бичих үгс..." rows="4" cols="50"></textarea><br>
+            <button type="submit">Илгээх</button>
+        </form>
+        <p id="messageFeedback" class="hidden">Таны илгээмж амжилттай илгээгдлээ!</p>
+        <ul id="messageList"></ul>
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+</html>
